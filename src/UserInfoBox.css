@@ -1,0 +1,16 @@
+.info-container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.avatar-picture {
+	max-height: 120px;
+}
+
+.username {
+	padding-top:20px;
+}
+
+.username-link:hover {
+	text-decoration: none;
+}

@@ -21,30 +21,30 @@ const store = createStore(
 )
 
 class AppProvider extends Component{
-	constructor(){
-		super();
-		this.state = { rehydrated: false }
-	}
+    constructor(){
+        super();
+        this.state = { rehydrated: false }
+    }
 
-	componentWillMount() {
-		persistStore(store, {}, () => {
-			this.setState({  rehydrated: true});
-		});
-	}
+    componentWillMount() {
+        persistStore(store, {}, () => {
+            this.setState({  rehydrated: true});
+        });
+    }
 
-	render() {
-		if(!this.state.rehydrated) return null;
-		return (
-			<Provider store={store}>
-				<Router>
-					<App />
-				</Router>
-			</Provider>
-		)
-	}
+    render() {
+        if(!this.state.rehydrated) return null;
+        return (
+            <Provider store={store}>
+                <Router>
+                    <App />
+                </Router>
+            </Provider>
+        )
+    }
 }
 
 ReactDOM.render(
-	<AppProvider />,
-	document.getElementById('root'));
+    <AppProvider />,
+    document.getElementById('root'));
 registerServiceWorker();

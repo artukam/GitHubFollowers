@@ -10,8 +10,9 @@ const App = props => {
     <div className="container-fluid">
       <Route exact path="/search" component={NavigationBar}/>
       <Switch>
-        <Route path="/" component={MainPage} />
+        <Route exact path="/" component={MainPage} />
         <Route exact path="/search" component={UserPage} />
+        <Route component={MainPage} />
       </Switch>
     </div>
   );

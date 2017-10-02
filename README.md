@@ -42,7 +42,8 @@ This application can be broken down to two screens.  The first is the initial se
 
 The UX flow for the user was planned as follows:  
 * A user will make a search on the main page.
-* A user will be taken to the results page where they can see information about a given user (or an error page if the user was not found.)
+* A user will be taken to the results page where they can see information about a given user (or an error page if the user was not found).
+* A user will be able to click to see more followers if that search result does not display all followers.
 * If the user wants to make a new search, they can do so using the search bar at the top of the results page without having to return to the main page.
 
 In the application code, the code was designed with this flow in mind.  At the top level, the 'App' component handles the routing for the application.  From there, the 'MainPage' component controls the front page view while the 'UserPage' component controls the results page view.  All additional pages/functionalities flow down from this component hierarchy.
